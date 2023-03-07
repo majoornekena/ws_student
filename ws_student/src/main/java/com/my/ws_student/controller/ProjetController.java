@@ -1,9 +1,7 @@
-package com.example.demo.controller;
+package com.my.ws_student.controller;
 
-import com.example.demo.models.community.Publication;
-import com.example.demo.models.projects.Projet;
-import com.example.demo.models.projects.Tache;
-import com.example.demo.utils.ToJsonData;
+
+import com.my.ws_student.models.projects.Projet;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

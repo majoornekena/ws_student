@@ -4,13 +4,18 @@ import com.my.ws_student.models.Etudiant;
 import com.my.ws_student.models.community.Publication;
 import com.my.ws_student.utils.Connex.Connexion;
 import com.my.ws_student.utils.DAO.ObjectBDD;
+import com.my.ws_student.utils.Fonction;
 import com.my.ws_student.utils.inter.ForeignKeyAnnotation;
 import com.my.ws_student.utils.inter.IdAnnotation;
 import com.my.ws_student.utils.inter.KeyAnnotation;
 import com.my.ws_student.utils.inter.TableAnnotation;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 
 @TableAnnotation
 public class Tache extends ObjectBDD {
@@ -218,7 +223,7 @@ public class Tache extends ObjectBDD {
         t.updateById(Connexion.getConnection());
     }
 
-     public double getTachesTermineesPourcentage(int idProject) throws Exception {
+     public double getSousTachesTermineesPourcentage(int idProject) throws Exception {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;

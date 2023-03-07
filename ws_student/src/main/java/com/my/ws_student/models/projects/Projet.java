@@ -3,13 +3,18 @@ package com.my.ws_student.models.projects;
 import com.my.ws_student.models.Etudiant;
 import com.my.ws_student.utils.Connex.Connexion;
 import com.my.ws_student.utils.DAO.ObjectBDD;
+import com.my.ws_student.utils.Fonction;
 import com.my.ws_student.utils.inter.ForeignKeyAnnotation;
 import com.my.ws_student.utils.inter.IdAnnotation;
 import com.my.ws_student.utils.inter.KeyAnnotation;
 import com.my.ws_student.utils.inter.TableAnnotation;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 
 @TableAnnotation
 public class Projet extends ObjectBDD {

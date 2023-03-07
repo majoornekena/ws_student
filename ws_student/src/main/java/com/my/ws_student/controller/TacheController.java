@@ -1,11 +1,10 @@
-package com.example.demo.controller;
+package com.my.ws_student.controller;
 
-import com.example.demo.models.community.Publication;
-import com.example.demo.models.projects.Projet;
-import com.example.demo.models.projects.Tache;
-import com.example.demo.utils.ToJsonData;
+
+import com.my.ws_student.models.projects.Tache;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +25,7 @@ public class TacheController {
     @PostMapping("/recherche")
     public ResponseEntity<List<Object[]>> recherche(@RequestParam("motcle") String motcle, @RequestParam("dateplanning") String dateplanning) throws Exception
     {
-        return new ResponseEntity<List<Object[]>>(t.rechercheParMotCle(motcle,dateplanning),HttpStatus.OK);
+        return new ResponseEntity<List<Object[]>>((MultiValueMap<String, String>) t.rechercheParMotCle(motcle,dateplanning),HttpStatus.OK);
     }
 
 }
